@@ -1,0 +1,32 @@
+<p>
+  component2 works!
+</p>
+
+<button (click)="getPeopleFromService()">Get people</button>
+
+<table *ngIf="people">
+<tr>
+  <th>
+    Id
+  </th>
+  <th>
+    First name
+  </th>
+  <th>
+    Last name
+  </th>
+  <th>
+    E-mail
+  </th>
+  <th>
+    Gender
+  </th>
+</tr>
+<tr *ngFor="let person of people">
+  <td>{{person.id}}</td>
+  <td>{{person.firstName}}</td>
+  <td>{{person.lastName}}</td>
+  <td>{{person.email}}</td>
+  <td>{{person.gender}}</td>
+</tr>
+</table>
